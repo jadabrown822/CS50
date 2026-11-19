@@ -8,8 +8,10 @@ from openai import OpenAI
 
 client = OpenAI()
 
+prompt = input("Prompt: ")
+
 response = client.response.create(
-    input="In one sentence, what is CS50?",
+    input=prompt,
     model="gpt-5"
 )
 
